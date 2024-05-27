@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Tech Blog</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  {{!--
+  <link rel="stylesheet" href="/css/jass.css"> --}}
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -14,13 +15,17 @@
     <nav>
       <ul>
         <li>
-          <a href="#about-me">Home</a>
+          <a href="">Home</a>
         </li>
         <li>
-          <a href="#work">Dashboard</a>
+          <a href="">Dashboard</a>
         </li>
         <li>
-          <a href="#contact-me">Login</a>
+          {{#if logged_in}}
+          <a href="/users/logout">Logout</a>
+          {{else}}
+          <a href="/login">Login</a>
+          {{/if}}
         </li>
       </ul>
     </nav>
@@ -28,6 +33,10 @@
       <h1>The Tech Blog</h1>
     </div>
   </header>
+  <main class="container-new-body">
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  </main>
 </body>
 
 </html>

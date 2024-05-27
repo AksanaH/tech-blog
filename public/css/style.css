@@ -34,3 +34,60 @@ a{
     box-shadow: 20px 10px rgb(150, 150, 150);
     display: inline-block;
 }
+
+.container-new-body{
+    background-color: rgb(217, 235, 212);
+    padding: 10px;
+}
+
+main {
+    background-color: rgb(217, 235, 212);
+}
+
+.header-login{
+    background-color: black;
+    color:rgb(217, 235, 212);
+}
+
+.signup a{
+    color: black;
+}
+
+.container-login-form{
+    border: 3px solid black;
+    /* margin: 10px; */
+}
+h2{
+    padding: 10px;
+}
+
+.login-form{
+    margin: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+label{
+    padding:10px;
+}
+
+.form-input{
+    padding:10px;
+    margin: 10px;
+}
+
+.btn{
+    padding:10px;
+    margin: 10px;
+    background-color: rgb(102, 102, 102);
+    color:rgb(228, 226, 243);
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.signup{
+    padding: 0 0 10px 10px;
+    margin: 0 0 10px 10px;
+}
