@@ -91,3 +91,24 @@ label{
     padding: 0 0 10px 10px;
     margin: 0 0 10px 10px;
 }
+
+.post-title{
+    color: rgb(152, 153, 152);
+}
+
+.header-post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: rgb(152, 153, 152);
+}
+
+.container-post{
+    border: 3px solid black;
+    margin:20px 30px;
+}
+
+.container-post p{
+    padding:10px;
+}
