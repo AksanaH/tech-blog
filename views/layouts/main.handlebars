@@ -15,10 +15,10 @@
     <nav>
       <ul>
         <li>
-          <a href="">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="">Dashboard</a>
+          <a href="/dashboard">Dashboard</a>
         </li>
         <li>
           {{#if logged_in}}
@@ -30,13 +30,22 @@
       </ul>
     </nav>
     <div class="container-h1">
+      {{#if dashboard}}
+      <h1>Your Dashboard</h1>
+      {{else}}
       <h1>The Tech Blog</h1>
+      {{/if}}
     </div>
   </header>
   <main class="container-new-body">
     <!-- Render the sub layout -->
     {{{ body }}}
   </main>
+  {{#if dashboard}}
+  <div class="container-button">
+    <button class="new-post-button">+ New Post</button>
+  </div>
+  {{/if}}
 </body>
 
 </html>

@@ -1,6 +1,10 @@
 <div class="container-login-form">
     <div class="header-login">
+        {{#if signup}}
+        <h2>Sign up</h2>
+        {{else}}
         <h2>Login</h2>
+        {{/if}}
     </div>
     <form class="form login-form">
         <div class="form-group">
@@ -12,12 +16,24 @@
             <input class="form-input" type="password" id="password-login" />
         </div>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit">Login!</button>
+            <button class="btn btn-primary" type="submit">
+                {{#if signup}}
+                Sign up!
+                {{else}}
+                Login!
+                {{/if}}
+            </button>
         </div>
     </form>
-    <div class="signup">
-        <a href="">Sign up instead</a>
+    {{#if signup}}
+    <div class="login">
+        <a href="/login">Login instead</a>
     </div>
+    {{else}}
+    <div class="signup">
+        <a href="/signup">Sign up instead</a>
+    </div>
+    {{/if}}
 </div>
 
 <script src="./js/login.js"></script>
