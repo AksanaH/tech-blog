@@ -97,4 +97,16 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
+router.get('/newpost', withAuth, async (req, res) => {
+    try {
+        // Pass serialized data and session flag into template
+        res.render('newPost', {
+            logged_in: req.session.logged_in,
+            dashboard: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
