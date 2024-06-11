@@ -1,15 +1,36 @@
 {{#each posts as |post| }}
-<div class="container-post">
-    <div class="header-post">
+<div class="{{^if ../dashboard}}container-post{{else}}container-dashboard{{/if}}">
+    <div class="{{^if ../dashboard}}header-post{{else}}dashboard-post{{/if}}">
+
         <h2>
+            {{#if ../dashboard}}
             <a class="post-title" href="/post/{{post.id}}">{{post.title}}</a>
+            {{else}}
+            <a class="post-title" href="/posts/comment/{{post.id}}">{{post.title}}</a>
+            {{/if}}
         </h2>
         <p>Posted by {{post.user.username}} on {{format_date post.date_created}}</p>
     </div>
+    {{^if ../dashboard}}
     <div class="text">
         <p>
             {{post.text}}
         </p>
     </div>
 </div>
+{{#ifEquals ../id post.id}}
+<div class="{{^if ../dashboard}}container-post{{else}}container-dashboard{{/if}}">
+
+    <form class="form new-comment-form">
+        <div class="form-group">
+            <label for="comment-title">Comment</label>
+            <input class="form-input" type="text" id="comment-title" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Add</button>
+        </div>
+    </form>
+</div>
+{{/ifEquals}}
+{{/if}}
 {{/each}}

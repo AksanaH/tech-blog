@@ -109,9 +109,23 @@ label{
     color: rgb(152, 153, 152);
 }
 
+.dashboard-post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(102, 102, 102);
+    color: rgb(152, 153, 152);
+}
+
 .container-post{
     border: 3px solid black;
     margin:20px 30px;
+}
+
+.container-dashboard{
+    margin:20px 30px;
+    border: 3px solid rgb(102, 102, 102) ;
+    border-radius: 10px;
 }
 
 .container-post p{
