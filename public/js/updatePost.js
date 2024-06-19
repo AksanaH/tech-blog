@@ -22,6 +22,26 @@ const updatePostHandler = async (event) => {
     }
 };
 
+const deleteButtonHandler = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+        const id = event.target.getAttribute('data-id');
+
+        const response = await fetch(`/posts/${id}`, {
+            method: 'DELETE',
+        });
+
+        if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert('Failed to delete post');
+        }
+    }
+};
+
 document
     .querySelector('.edit-post-form')
     .addEventListener('submit', updatePostHandler);
+
+document
+    .querySelector('.delete')
+    .addEventListener('click', deleteButtonHandler);
