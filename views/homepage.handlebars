@@ -21,6 +21,7 @@
             {{post.text}}
         </p>
     </div>
+    {{/if}}
 </div>
 {{#each comments as |com| }}
 <div class="{{^if ../dashboard}}container-post{{else}}container-dashboard{{/if}}">
@@ -50,5 +51,5 @@
 </div>
 <script src="./../../js/comment.js"></script>
 {{/ifEquals}}
-{{/if}}
+
 {{/each}}
