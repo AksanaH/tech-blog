@@ -1,4 +1,4 @@
-# tech-blog
+# Tech-Blog
 This web-site is a Tech Blog
 
 ## Description
@@ -8,7 +8,7 @@ This web-site follows the MVC paradigm in its architectural structure, using Han
 N/A
 
 ## Usage
-1. Open:  
+1. Open:  https://tech-blog-jo8m.onrender.com/ 
 2. Press Login button and enter your Username and Password or create a new user by clicking Sign Up button instead.
 3. After loginning you will see on your Dashboard 'New Post' button that allow you to create a Post. After creating you'll see your posts on Dashboard page.
 Press the title of your post and you'll see a window that allow you to update or delete post.
@@ -26,3 +26,16 @@ Press the title of your post and you'll see a window that allow you to update or
 
 ## Mock-Up
 The following images show the wed-site appearance and functionality:
+
+![Getting Started](./public/mock-up/mock_up_home.png)
+
+![Getting Started](./public/mock-up/mock_up_login.png)
+
+![Getting Started](./public/mock-up/mock_up_dashboard.png)
+
+![Getting Started](./public/mock-up/mock_up_new_post.png)
+
+![Getting Started](./public/mock-up/mock_up_edit_post.png)
+
+![Getting Started](./public/mock-up/mock_up_comment.png)
+
